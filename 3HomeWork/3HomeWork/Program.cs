@@ -20,7 +20,7 @@ namespace ConsoleApp16
 
     class Program
     {
-        private static int x = 0;
+        //private static int x = 0;
         static void Main(string[] args)
         {
             Console.WriteLine("11.Найти сумму элементов массива\n" +
@@ -326,58 +326,56 @@ namespace ConsoleApp16
                                     //заполнен надо его расширить на 1 элемент и снова дать пользователю возможность вводить числа, 
                                     //когда пользователь введет не число, вывести на экран этот массив
         {
-            //    int g = 1;
-            //    int[] a = new int[g];
-            //    for (int i = 0; i < g; i++)
+            //int g = 1;
+            //int[] a = new int[g];
+            //for (int i = 0; i < g; i++)
+            //{
+            //    int ai1 = 0;
+            //    Console.WriteLine("index {0}: ", i);
+
+            //    string ai = Console.ReadLine();
+            //    Int32.TryParse(ai, out ai1);
+            //    if (ai1 == 0)
             //    {
-            //        int ai1 = 0;
-            //        Console.WriteLine("index {0}: ",i);
-
-            //        string ai = Console.ReadLine();
-            //      Int32.TryParse(ai,out ai1);
-            //        if (ai1 == 0) {
-            //            Console.Write("Massive: ");
-            //            for (int j = 0; j < a.Length; j++)
-            //            {
-            //                Console.Write("{0: 0}", a[j]);
-            //            }
-
+            //        Console.Write("Massive: ");
+            //        for (int j = 0; j < a.Length; j++)
+            //        {
+            //            Console.Write("{0: 0}", a[j]);
             //        }
-            //        //int ai1 = int.Parse(ai); 
-            //        a[i] = ai1;
 
-            //        g = g+1;
             //    }
+            //    //int ai1 = int.Parse(ai); 
+            //    a[i] = ai1;
+
+            //    g = g + 1;
+            //}
 
             int g = 1;
             int[] a = new int[g];
             for (int i = 0; ; i++)
-            {
-
-
-
-                Console.Write("index {0}: ", i);
+            {   Console.Write("index {0}: ", i);
                 int ai2 = 0;
                 string ai = Console.ReadLine();
-
                 Int32.TryParse(ai, out int ai1);
                 if (ai1 == 0)
                 {
                     Console.Write("Massive: ");
-                    for (int j = 0; j < a1.Length; j++)
+                    for (int j = 0; j < a.Length; j++)
                     {
-                        Console.Write("{0: 0}", a1[j]);
+                        Console.Write("{0: 0}", a[j]);
                     }
                     break;
                 }
                 else
                 {
 
-                    g = g + 1;
+                    g += 1;
                     ai2 = int.Parse(ai);
                     a[i] = ai2;
+                    int[] a1 = new int[g];
                     Array.Copy(a, a1, a.Length);
-
+                    Array.Resize(ref a, g);
+                    Array.Copy(a1, a, a1.Length);
 
                 }
 
