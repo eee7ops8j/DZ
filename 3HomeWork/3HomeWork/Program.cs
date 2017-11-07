@@ -353,7 +353,10 @@ namespace ConsoleApp16
             int g = 1;
             int[] a = new int[g];
             for (int i = 0; ; i++)
-            {   Console.Write("index {0}: ", i);
+
+            {
+                Console.WriteLine ("Massive a: {0}", a.Length);
+                Console.Write("index {0}: ", i);
                 int ai2 = 0;
                 string ai = Console.ReadLine();
                 Int32.TryParse(ai, out int ai1);
@@ -376,8 +379,10 @@ namespace ConsoleApp16
                     Array.Copy(a, a1, a.Length);
                     Array.Resize(ref a, g);
                     Array.Copy(a1, a, a1.Length);
-
+                    Console.WriteLine("Massive a1: {0}", a1.Length);
                 }
+                
+            
 
             }
             Console.ReadLine();
