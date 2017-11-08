@@ -74,22 +74,24 @@ namespace ConsoleApp16
             }
             Console.ReadLine();
         }
-        static void Action4()
+        static void Action4()  //"4.Считать с клавиатуры число и вывести все его цифры отдельно\n" +
         {
+            
+
 
         }
-        static void Action5()
+        static void Action5()//"5.Считать с клавиатуры число и вывести его наоборот\n" +
         {
-            //Console.Write("Enter your number : ");
-            //int a = int.Parse(Console.ReadLine());
+            Console.Write("Enter your number : ");
+            int a = int.Parse(Console.ReadLine());
 
-            //while (a != 0)
-            //{
-            //    int b = a % 10;
-            //    a /= 10;
-            //    Console.Write(b);
-            //}
-            //Console.ReadLine();
+            while (a != 0)
+            {
+                int b = a % 10;
+                a /= 10;
+                Console.Write(b);
+            }
+            Console.ReadLine();
         }
         static void Action6()
         {
