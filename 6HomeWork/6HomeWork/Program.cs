@@ -32,9 +32,9 @@ namespace ConsoleApp24
         
         class NewTryParse
         {
-            public void Test(int inPassword)
+            public string Test(int inPassword, out string outPassword)
             {
-                string outPassword="";
+                outPassword = "";
                 for (int i = 1; i < inPassword + 1; i++)
                 {
 
@@ -43,43 +43,46 @@ namespace ConsoleApp24
                     Random rnd = new Random(DateTime.Now.Millisecond + (i * 1000));
                     z = rnd.Next(33, 126);
                     outPassword += (char)z;
-                }
+                 
 
-                Console.Write("Ваш новый пароль: {0}", outPassword);
+                }
+                return outPassword;
+                //   Console.Write("Ваш новый пароль: {0}", outPassword);
             }
 
-            public void Test(string inChar)
+            public int Test(string inChar, out int outChar)
             {
                 string x = inChar;
 
 
-                if (x == "A" || x == "a") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 1);
-                if (x == "B" || x == "b") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 2);
-                if (x == "C" || x == "c") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 3);
-                if (x == "D" || x == "d") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 4);
-                if (x == "E" || x == "E") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 5);
-                if (x == "F" || x == "f") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 6);
-                if (x == "G" || x == "g") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 7);
-                if (x == "H" || x == "h") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 8);
-                if (x == "I" || x == "i") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 9);
-                if (x == "J" || x == "j") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 10);
-                if (x == "K" || x == "k") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 11);
-                if (x == "L" || x == "l") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 12);
-                if (x == "M" || x == "m") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 13);
-                if (x == "N" || x == "n") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 14);
-                if (x == "O" || x == "o") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 15);
-                if (x == "P" || x == "p") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 16);
-                if (x == "Q" || x == "q") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 17);
-                if (x == "R" || x == "r") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 18);
-                if (x == "S" || x == "s") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 19);
-                if (x == "T" || x == "t") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 20);
-                if (x == "U" || x == "u") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 21);
-                if (x == "V" || x == "v") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 22);
-                if (x == "W" || x == "w") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 23);
-                if (x == "X" || x == "x") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 24);
-                if (x == "Y" || x == "y") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 25);
-                if (x == "Z" || x == "z") Console.Write("у буквы '{0}' индекс '{1}'", inChar, 26);
-              
+                if (x == "A" || x == "a") return outChar = 1;
+                if (x == "B" || x == "b") return outChar = 2;
+                if (x == "C" || x == "c") return outChar = 3;
+                if (x == "D" || x == "d") return outChar = 4;
+                if (x == "E" || x == "E") return outChar = 5;
+                if (x == "F" || x == "f") return outChar = 6;
+                if (x == "G" || x == "g") return outChar = 7;
+                if (x == "H" || x == "h") return outChar = 8;
+                if (x == "I" || x == "i") return outChar = 9;
+                if (x == "J" || x == "j") return outChar = 10;
+                if (x == "K" || x == "k") return outChar = 11;
+                if (x == "L" || x == "l") return outChar = 12;
+                if (x == "M" || x == "m") return outChar = 13;
+                if (x == "N" || x == "n") return outChar = 14;
+                if (x == "O" || x == "o") return outChar = 15;
+                if (x == "P" || x == "p") return outChar = 16;
+                if (x == "Q" || x == "q") return outChar = 17;
+                if (x == "R" || x == "r") return outChar = 18;
+                if (x == "S" || x == "s") return outChar = 19;
+                if (x == "T" || x == "t") return outChar = 20;
+                if (x == "U" || x == "u") return outChar = 21;
+                if (x == "V" || x == "v") return outChar = 22;
+                if (x == "W" || x == "w") return outChar = 23;
+                if (x == "X" || x == "x") return outChar = 24;
+                if (x == "Y" || x == "y") return outChar = 25;
+                if (x == "Z" || x == "z") return outChar = 26;
+                return outChar = 0;
+
             }
 
         }
@@ -109,14 +112,25 @@ namespace ConsoleApp24
                     switch (p)
                     {
                         case 1:
+                            string outPassword;
                             Console.Write("Длина пароля:");
-                            int inPassword = int.Parse(Console.ReadLine());
-                            TryParse.Test(inPassword);
+                            //string outPassword = "";
+                         int inPassword = int.Parse(Console.ReadLine());
+                            //  int inPassword = TryParse.Test(Console.ReadLine()),out string outPassword);
+                            TryParse.Test(inPassword, out outPassword);
+                            Console.WriteLine(outPassword);
+
+                            //  Console.WriteLine("{0} {1}",TryParse.Test(inPassword, out outPassword));
+                            //TryParse.Test(inPassword);
                             break;
                         case 2:
+                            int outChar;
                             Console.Write("Буква :");
                             string inChar = Console.ReadLine();
-                            TryParse.Test(inChar);
+                            TryParse.Test(inChar, out outChar);
+                            Console.WriteLine(outChar);
+                            //Console.WriteLine("{0} {1}", TryParse.Test(Console.ReadLine(), out outChar));
+                            //   TryParse.Test(inChar);
                             break;
                         default: break;
                     }
