@@ -12,7 +12,7 @@ namespace ConsoleApp24
 {
     class Program
     {
-        public static string outChar, outPassword;
+        //public static string outChar, outPassword;
         //public static int outPassword;
         public static void RaisingPower(int x, int y)
         {
@@ -34,6 +34,7 @@ namespace ConsoleApp24
         {
             public void Test(int inPassword)
             {
+                string outPassword="";
                 for (int i = 1; i < inPassword + 1; i++)
                 {
 
